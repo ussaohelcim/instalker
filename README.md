@@ -1,5 +1,5 @@
 # instalker
-Programa para baixar stories do instagram em cima do Instaloader.
+Programa para baixar stories do instagram, feito em cima do Instaloader.
 
 # Como usar
 
@@ -21,4 +21,18 @@ Depois modifique o arquivo ``db.json``
 		"" # aqui são os usernames das contas que voce quer baixar os stories, separado por virgula
 	]
 }
+```
+
+```python
+python3 instalker.py
+# baixa, no diretorio atual, todos os stories de todos os usuarios adicionados no db
+```
+```python
+python3 instalker.py --h
+# baixa, no diretorio atual, todos os highlights de todos os usuarios adicionados no db
+```
+
+```python
+python3 instalker.py --h
+# baixa, no diretorio atual, todas postagens, stories e highlights de todos os usuarios adicionados no db
 ```
