@@ -37,7 +37,8 @@ f.close()
 
 args = sys.argv
 
-il = instaloader.Instaloader(save_metadata=False)
+il = instaloader.Instaloader(save_metadata=False,quiet=False)
+
 
 il.login(user['usuario'],user['senha'])
 
@@ -53,12 +54,17 @@ elif(args[1] == "--a"):
 	for user in usernames:
 		ImprimirStories(user)
 		ImprimirHighLights(user)
-		ImprimirPostagens(user)
+		
 		
 elif(args[1] == "--h"):
 	print("Selecionado para imprimir apenas highlights")
 	for user in usernames:
 		ImprimirHighLights(user)
+
+elif(args[1] == "--p"):
+	print("Selecionado para imprimir apenas as postagens")
+	for user in usernames:
+		ImprimirPostagens(user)
 
 else:
 	print("argumentos usado de maneira errada")

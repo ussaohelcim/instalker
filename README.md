@@ -18,21 +18,31 @@ Depois modifique o arquivo ``db.json``
 		"senha":""# digite aqui sua senha
 	},
 	"usernames":[
-		"" # aqui são os usernames das contas que voce quer baixar os stories, separado por virgula
+		"" # aqui são os usernames das contas que voce 
+		#quer baixar os stories, separado por virgula
 	]
 }
 ```
 
 ```python
 python3 instalker.py
-# baixa, no diretorio atual, todos os stories de todos os usuarios adicionados no db
+# baixa, no diretorio atual, todos os stories de 
+# todos os usuarios adicionados no db
 ```
 ```python
 python3 instalker.py --h
-# baixa, no diretorio atual, todos os highlights de todos os usuarios adicionados no db
+# baixa, no diretorio atual, todos os highlights 
+# de todos os usuarios adicionados no db
 ```
 
 ```python
-python3 instalker.py --h
-# baixa, no diretorio atual, todas postagens, stories e highlights de todos os usuarios adicionados no db
+python3 instalker.py --p
+# baixa, no diretorio atual todas postagens
+# de todos os usuarios adicionados no db
+```
+
+```python
+python3 instalker.py --a
+# baixa, no diretorio atual, todas postagens, 
+# stories e highlights de todos os usuarios adicionados no db
 ```
