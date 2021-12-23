@@ -20,7 +20,11 @@ def ImprimirPostagens(user:str):
 	p = GetProfileFromUsername(user)
 	if( not (p == None)):
 		for post in p.get_posts():
-			il.download_post(post,p.username+":posts")
+			baixou = il.download_post(post,p.username+":posts")
+			if(not baixou):
+				print("ja baixado, indo para proximo usuario")
+				break
+			
 
 def ImprimirHighLights(user:str):
 	p = GetProfileFromUsername(user)
@@ -37,7 +41,7 @@ f.close()
 
 args = sys.argv
 
-il = instaloader.Instaloader(save_metadata=False,quiet=False)
+il = instaloader.Instaloader(save_metadata=False,quiet=False, download_video_thumbnails=False)
 
 
 il.login(user['usuario'],user['senha'])
@@ -54,6 +58,7 @@ elif(args[1] == "--a"):
 	for user in usernames:
 		ImprimirStories(user)
 		ImprimirHighLights(user)
+		ImprimirPostagens(user)
 		
 		
 elif(args[1] == "--h"):
