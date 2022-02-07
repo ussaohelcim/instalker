@@ -41,12 +41,12 @@ f.close()
 
 args = sys.argv
 
-il = instaloader.Instaloader(save_metadata=False,quiet=False, download_video_thumbnails=False)
+print("Argumentos usados: "+ str(args))
 
+il = instaloader.Instaloader(save_metadata=False,quiet=False, download_video_thumbnails=False,filename_pattern='{date_local}')
 
 il.login(user['usuario'],user['senha'])
 
-print("Argumentos usados: "+ str(args))
 if(len(args) == 1):
 	print("Imprimindo apenas stories")
 	for user in usernames:
